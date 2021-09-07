@@ -155,11 +155,7 @@ ggplot(campsites) +
 library(terrainr)
 downloaded_data <- get_tiles(campsites,
                              output_prefix = "bryce_canyon",
-                             services = c("elevation", "ortho", 
-                                          "hydro", "govunits", "wbd", 
-                                          "contours",  "transportation",
-                                          "structures", "geonames"
-                                          ),
+                             services = c("elevation", "ortho"),
                              resolution = 30)
 ```
 
@@ -239,10 +235,6 @@ ggplot() +
   geom_sf(data = campsites, color = "red")
 ```
 
----
-class: center middle
-
-![](usgs.jpeg)
 
 ---
 
@@ -253,6 +245,12 @@ ggplot() +
   coord_fixed() + 
   labs(caption = "Artwork by @allison_horst")
 ```
+
+---
+class: center middle
+
+![](usgs.jpeg)
+
 
 ---
 

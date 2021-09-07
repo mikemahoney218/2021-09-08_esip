@@ -4,7 +4,7 @@
     <title>terrainr:</title>
     <meta charset="utf-8" />
     <meta name="author" content="Mike Mahoney" />
-    <meta name="date" content="2021-09-02" />
+    <meta name="date" content="2021-09-07" />
     <script src="esip_files/header-attrs/header-attrs.js"></script>
     <script src="esip_files/xaringanExtra-webcam/webcam.js"></script>
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # terrainr:
 ## Spatial Data Access and Visualization in R
 ### Mike Mahoney
-### 2021-09-02
+### 2021-09-07
 
 ---
 
@@ -138,11 +138,7 @@ ggplot(campsites) +
 library(terrainr)
 downloaded_data &lt;- get_tiles(campsites,
                              output_prefix = "bryce_canyon",
-                             services = c("elevation", "ortho", 
-                                          "hydro", "govunits", "wbd", 
-                                          "contours",  "transportation",
-                                          "structures", "geonames"
-                                          ),
+                             services = c("elevation", "ortho"),
                              resolution = 30)
 ```
 
@@ -159,27 +155,6 @@ downloaded_data
 ## 
 ## $ortho
 ## [1] "bryce_canyon_USGSNAIPPlus_1_1.tif"
-## 
-## $hydro
-## [1] "bryce_canyon_nhd_1_1.tif"
-## 
-## $govunits
-## [1] "bryce_canyon_govunits_1_1.tif"
-## 
-## $wbd
-## [1] "bryce_canyon_wbd_1_1.tif"
-## 
-## $contours
-## [1] "bryce_canyon_contours_1_1.tif"
-## 
-## $transportation
-## [1] "bryce_canyon_transportation_1_1.tif"
-## 
-## $structures
-## [1] "bryce_canyon_structures_1_1.tif"
-## 
-## $geonames
-## [1] "bryce_canyon_geonames_1_1.tif"
 ```
 
 
@@ -267,10 +242,6 @@ ggplot() +
 
 &lt;img src="esip_files/figure-html/unnamed-chunk-11-1.png" width="100%" /&gt;
 
----
-class: center middle
-
-![](usgs.jpeg)
 
 ---
 
@@ -284,6 +255,12 @@ ggplot() +
 ```
 
 &lt;img src="esip_files/figure-html/unnamed-chunk-12-1.png" width="100%" /&gt;
+
+---
+class: center middle
+
+![](usgs.jpeg)
+
 
 ---
 
